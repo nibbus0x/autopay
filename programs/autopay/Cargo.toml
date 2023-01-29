@@ -1,0 +1,23 @@
+[package]
+name = "autopay"
+version = "0.1.0"
+description = "Created with Anchor"
+rust-version = "1.56"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "autopay"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.26.0"
+clockwork-sdk = "1.4.0"
+clockwork-cron = "1.4.0"
+clockwork-thread-program = { version = "1.4.0", features = ["no-entrypoint"] }
